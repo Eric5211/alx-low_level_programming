@@ -1,16 +1,17 @@
-#include <stdlib.h>
-#include <time.h>
-/**
- * main - Entry point
- * description: a programme prints alphabets in lowercase
- * Return: Always 0 (success)
- */
-int main(void)
-{
-	int n;
+#include "main.h"
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
-	return (0);
+/**
+ *print_alphabet - prints the alphabet in lowercase followed by new line
+ *
+ * Return: 0 success
+ */
+void print_alphabet(void)
+{
+	char alp;
+
+	for (alp = 'a'; alp <= 'z'; alp++)
+	{
+	putchar(alp);
+	}
+	putchar('\n');
 }
