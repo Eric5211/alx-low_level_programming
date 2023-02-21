@@ -1,12 +1,16 @@
-#include "main.h"
-
+#include <stdlib.h>
+#include <time.h>
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * main - Entry point
+ * description: a programme prints alphabets in lowercase
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-    print_alphabet();
-    return (0);
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	/* your code goes there */
+	return (0);
 }
