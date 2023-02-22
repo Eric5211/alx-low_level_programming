@@ -1,22 +1,40 @@
 #include <stdio.h>
-
+#include "main.h"
 /**
- * main - Lists all the natural numbers below 1024 (excluded)
- *        that are multiples of 3 or 5.
- *
- * Return: Always 0.
+ * print_to_98 - a function that prints all natural numbers from n to 98
+ * user input's number prints to 98, regardless < 98 or > 98
+ * @n: number input
+ * Return: Always 0 (Success)
  */
-int main(void)
+void print_to_98(int n)
 {
-int i, sum = 0;
-
-for (i = 0; i < 1024; i++)
+if (n < 98)
 {
-if ((i % 3) == 0 || (i % 5) == 0)
-sum += i;
+while (n <= 98)
+{
+printf("%d", n);
+if (n != 98)
+{
+printf(", ");
 }
-
-printf("%d\n", sum);
-
-return (0);
+n++;
+}
+}
+else if (n > 98)
+{
+while (n >= 98)
+{
+printf("%d", n);
+if (n != 98)
+{
+printf(", ");
+}
+n--;
+}
+}
+else
+{
+printf("98");
+}
+printf("\n");
 }
