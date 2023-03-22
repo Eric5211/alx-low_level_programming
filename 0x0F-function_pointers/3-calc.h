@@ -1,7 +1,7 @@
 #ifndef calc_h
 #define calc_h
 
-/**
+/*
  * struct op - is the structure op
  * @op: operator input
  * @f: function pointer
