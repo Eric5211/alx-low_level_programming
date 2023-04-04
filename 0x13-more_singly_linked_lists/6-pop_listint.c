@@ -1,21 +1,26 @@
 #include "lists.h"
 
 /**
- * get_nodeint_at_index - returns the nth node of a listint_t linked list.
- * @head: the list
- * @index: the node level
- * Return: the node found
+ * pop_listint - Deletes the head node of a listint_t list.
+ * @head: A pointer to the address of the
+ *        head of the listint_t list.
+ *
+ * Return: If the linked list is empty - 0.
+ *         Otherwise - The head node's data (n).
  */
-listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
+int pop_listint(listint_t **head)
 {
-	unsigned int i = 0;
+	listint_t *tmp;
+	int ret;
 
-	while (head)
-	{
-		if (i++ == index)
-			return (head);
-		head = head->next;
-	}
+	if (*head == NULL)
+		return (0);
 
-	return (NULL);
+	tmp = *head;
+	ret = (*head)->n;
+	*head = (*head)->next;
+
+	free(tmp);
+
+	return (ret);
 }
